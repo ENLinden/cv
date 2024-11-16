@@ -5,10 +5,10 @@ Welcome to my **CV**, a collection of LaTeX templates designed to streamline the
 
 ### File Descriptions
 
-- **cover_letter.tex**: LaTeX template for your cover letter. Incorporates customizations for your application.
-- **cv_skills.txt**: A text file where you list your skills and experiences. Editable to match your unique profile.
-- **cv.tex**: LaTeX template for your CV. Utilizes the skills listed in `cv_skills.txt`.
+- **cv_skills.txt**: A text file where you list your skills and experiences.
 - **preamble.tex**: Contains common configurations and header info used across different LaTeX documents.
+- **cv.tex**: LaTeX template for your CV. Utilizes the skills listed in `cv_skills.txt`.
+- **cover_letter.tex**: LaTeX template for your cover letter.
 - **references.tex**: Template for listing your professional references.
 
 
@@ -22,8 +22,7 @@ Ensure you have the following installed on your system:
 - **Git**: For version control and repository management.
 - **XeLaTeX**: Required for compiling the provided LaTeX templates.
 
-
-### 🔧 Installation
+### 📝 Usage Instructions
 
 1. **Clone the Repository**
 
@@ -31,32 +30,13 @@ Ensure you have the following installed on your system:
    git clone https://github.com/ERLindeman/cv.git
    cd cv
 
-2. **Install Dependencies**
-
-   Ensure all required LaTeX packages are installed. You can typically do this via your LaTeX distribution's package manager.
-
-
-### 📝 Usage Instructions
-
-Follow these steps to customize your job application documents:
-
-1. **Edit Your Skills and References**
+2. **Update Info in Files**
 
    - **Update `cv_skills.txt`**: List your relevant skills and experiences.
+   - **Update `preamble.tex`**: Adjust settings such as fonts, colors, and personal information to match your preferences.
    - **Update `references.tex`**: Add or modify your professional references.
 
-2. **Customize the Preamble**
-
-   - **Edit `preamble.tex`**: Adjust settings such as fonts, colors, and personal information to match your preferences.
-
-3. **Generate Your CV and Cover Letter**
-
-   - **CV (`cv.tex`)**: Incorporates your skills from `cv_skills.txt`.
-   - **Cover Letter (`cover_letter.tex`)**: Tailored to your job application needs.
-
-4. **Use the Custom GPT Assistant**
-
-   Enhance your documents with AI assistance:
+3. **Regenerate Documents with Updated Info**
 
    - **Start a Conversation**: [👉 Try the Custom GPT](https://chatgpt.com/g/g-brdIFXKqk-job-application-tailor)
    - **Instructions**:
@@ -64,50 +44,12 @@ Follow these steps to customize your job application documents:
      2. **Request Updates**: Ask the GPT to align your CV with the listed skills.
      3. **Commit Changes**: Replace the existing `cv.tex` with the updated code from GPT and commit your changes.
 
-5. **Target Specific Job Listings**
+4. **Target Specific Job Listings**
 
    - **Create a New Branch**: For each job application, create a new branch.
-   - **Start a New GPT Conversation**: Use the first prompt suggestion button to initiate a job listing targeting session.
-   - **Update Documents**: After each interaction, paste the GPT-generated code snippets into the relevant files and commit your changes.
+   - **Start a New GPT Conversation**: Use the first prompt suggestion button to initiate a job listing targeting session. 
+   - **Update Documents**: Paste the GPT-generated code snippets into the relevant files and commit your changes after each interaction.
 
-
-### 📈 Example Workflow
-
-1. **Initial Setup**
-
-   ```bash
-   git clone https://github.com/ERLindeman/cv.git
-   cd cv
-
-### 2. **Edit Skills and Preamble**
-
-- **Update `cv_skills.txt`**: List your relevant skills and experiences.
-- **Update `references.tex`**: Add or modify your professional references.
-
-### 3. **Customize the Preamble**
-
-- **Edit `preamble.tex`**: Adjust settings such as fonts, colors, and personal information to match your preferences.
-
-### 4. **Generate Your CV and Cover Letter**
-
-- **CV (`cv.tex`)**: Incorporates your skills from `cv_skills.txt`.
-- **Cover Letter (`cover_letter.tex`)**: Tailored to your job application needs.
-
-### 5. **Use the Custom GPT Assistant**
-
-Enhance your documents with AI assistance:
-
-- **Start a Conversation**: [👉 Try the Custom GPT](https://chatgpt.com/g/g-brdIFXKqk-job-application-tailor)
-- **Instructions**:
-  1. **Paste `cv_skills.txt` and `cv.tex`** into the GPT conversation.
-  2. **Request Updates**: Ask the GPT to align your CV with the listed skills.
-  3. **Commit Changes**: Replace the existing `cv.tex` with the updated code from GPT and commit your changes.
-
-### 6. **Target Specific Job Listings**
-
-- **Create a New Branch**: For each job application, create a new branch.
-- **Start a New GPT Conversation**: Use the first prompt suggestion button to initiate a job listing targeting session.
-- **Update Documents**: After each interaction, paste the GPT-generated code snippets into the relevant files and commit your changes.
 
 ## 📌 Additional Information
 
