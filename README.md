@@ -1,6 +1,3 @@
-![Last Commit](https://img.shields.io/github/last-commit/ERLindeman/cv)
-![License](https://img.shields.io/github/license/ERLindeman/cv)
-
 ## 🚀 Overview
 
 Welcome to my **CV**, a collection of LaTeX templates designed to streamline the job application process. Accompanied by a **Custom GPT Assistant**, to tailor the CV and cover letter to target each job listing.
