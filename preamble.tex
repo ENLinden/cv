@@ -61,25 +61,25 @@
 
 \AtBeginDocument{%
   \noindent%
-  \makebox[\textwidth][l]{%
-    \vtop{%
+  \begin{minipage}[t]{20cm}%
+    \begin{minipage}[t]{9.75cm}%
       \ifcolorful%
-        \begin{tikzpicture}[baseline=(current bounding box.north)]%
+        \begin{tikzpicture}[baseline=(current bounding box.south)]%
           \clip (0,0) circle (1.25cm);%
           \node at (0,0){\includegraphics[width=2.5cm]{Enoch}};%
           \draw[accent,line width=0.4pt] (0,0) circle (1.25cm);%
         \end{tikzpicture}\hspace{5mm}%
       \fi%
-      \makecvheader%
-    }%  
+      \parbox[t]{\linewidth}{\makecvheader}%
+    \end{minipage}%
     \hfill%
-    \vtop{%
+    \begin{minipage}[t]{9.75cm}%
       \cvsection{Summary}%
       \begin{quote}\noindent%
         I am dedicated to empowering individuals through innovative%
         technology so that they can face their challenges with%
         resilience to create a more hopeful world for all.%
       \end{quote}%
-    }%
-  }%
+    \end{minipage}%
+  \end{minipage}%
 }
