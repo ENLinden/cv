@@ -64,24 +64,23 @@
   \begin{minipage}[t]{20cm}%
     \begin{minipage}[t]{9.75cm}%
       \ifcolorful%
-        \raisebox{-2pt}{%
-          \begin{tikzpicture}[baseline=(current bounding box.center)]%
-            \clip (0,0) circle (1.25cm);%
-            \node at (0,0){\includegraphics[width=2.5cm]{Enoch}};%
-            \draw[accent,line width=0.4pt] (0,0) circle (1.25cm);%
-          \end{tikzpicture}}\hspace{5mm}%
+        \begin{tikzpicture}[baseline=(current bounding box.center)]%
+          \clip (0,0) circle (1.25cm);%
+          \node at (0,0){\includegraphics[width=2.5cm]{Enoch}};%
+          \draw[accent,line width=0.4pt] (0,0) circle (1.25cm);%
+        \end{tikzpicture}\hspace{5mm}%
       \fi%
       \vtop{\makecvheader}%
     \end{minipage}%
     \hfill%
     \begin{minipage}[t]{9.75cm}%
-      \vtop{%
-        \cvsection{Summary}%
-        \begin{quote}\noindent%
-          I am dedicated to empowering individuals through innovative%
-          technology so that they can face their challenges with%
-          resilience to create a more hopeful world for all.%
-        \end{quote}}%
+      \vspace*{-2cm}% 
+      \cvsection{Summary}%
+      \begin{quote}\noindent%
+        I am dedicated to empowering individuals through innovative%
+        technology so that they can face their challenges with%
+        resilience to create a more hopeful world for all.%
+      \end{quote}%
     \end{minipage}%
   \end{minipage}%
 }
