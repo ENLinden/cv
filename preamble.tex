@@ -3,7 +3,6 @@
 \documentclass[10pt,a4paper,ragged2e]{altacv}
 
 %% MUST compile with XeLaTeX or LuaLaTeX
-
 \geometry{
   left=0.5cm,
   right=0.5cm,
@@ -11,9 +10,9 @@
   bottom=0.5cm,
 }
 
-\setmainfont{NotoSans_ExtraCondensed-Regular}[
-  Path = ./fonts/,
-  Extension = .ttf
+\setmainfont{NotoSans_ExtraCondensed-Regular}[%
+  Path = ./fonts/,%
+  Extension = .ttf%
 ]
 
 \usepackage{multicol}
@@ -24,7 +23,7 @@
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
 
-\AtBeginDocument{
+\AtBeginDocument{%
   \justifying
   \hyphenpenalty=10000
   \exhyphenpenalty=10000
@@ -36,11 +35,7 @@
 
 % Conditional flags
 \newif\ifcolorful
-
-% Set defaults
 \colorfulfalse
-
-% If flags are defined externally, set them accordingly
 \ifdefined\colorful
   \colorfultrue
 \fi
@@ -61,30 +56,30 @@
   \colorlet{accent}{Azure}
 \fi
 
-\noindent
-\begin{minipage}{20cm}
-  \begin{minipage}{9.75cm}
-    \ifcolorful
-      \photo[2.5cm][0.4pt]{Enoch}
-    \fi
-    \name{Enoch Lindeman}
-    \tagline{Technology Support Specialist / Help Desk}
-    \personalinfo{
-      \mailaddress{er@lndmn.com}
-      \phone{(619) 333-8221}\\
-      \linkedin{www.linkedin.com/in/enoch-lindeman}
-      \location{Utica, NY}
-    }
-  \end{minipage}
-  \hfill
-  \begin{minipage}{9.75cm}
-    \cvsection{Summary}
-    \begin{quote}
-      \noindent
-      I am dedicated to empowering individuals through innovative
-      technology so that they can face their challenges with
-      resilience to create a more hopeful world for all.
-    \end{quote}
-  \end{minipage}
-\end{minipage}
-
+\AtBeginDocument{%
+  \noindent
+  \begin{minipage}{20cm}
+    \begin{minipage}{9.75cm}
+      \ifcolorful
+        \photo[2.5cm][0.4pt]{Enoch}
+      \fi
+      \name{Enoch Lindeman}
+      \tagline{Technology Support Specialist / Help Desk}
+      \personalinfo{%
+        \mailaddress{er@lndmn.com}%
+        \phone{(619) 333-8221}\\
+        \linkedin{www.linkedin.com/in/enoch-lindeman}%
+        \location{Utica, NY}%
+      }
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}{9.75cm}
+      \cvsection{Summary}
+      \begin{quote}\noindent
+        I am dedicated to empowering individuals through innovative
+        technology so that they can face their challenges with
+        resilience to create a more hopeful world for all.
+      \end{quote}
+    \end{minipage}%
+  \end{minipage}%
+}
