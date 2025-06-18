@@ -18,6 +18,7 @@
 \usepackage{multicol}
 \usepackage{ragged2e}
 \usepackage{etoolbox}
+\usepackage{graphicx}
 
 % Customizations
 \renewcommand{\itemmarker}{{\small\textbullet}}
@@ -54,14 +55,15 @@
   \definecolor{Azure}{HTML}{007FFF}
   \colorlet{heading}{Azure}
   \colorlet{accent}{Azure}
+  \photo[2.5cm][0.4pt]{Enoch}
 \fi
 
 \AtBeginDocument{%
   \noindent
-  \begin{minipage}{20cm}
-    \begin{minipage}{9.75cm}
+  \begin{minipage}[t]{20cm}
+    \begin{minipage}[t]{9.75cm}
       \ifcolorful
-        \photo[2.5cm][0.4pt]{Enoch}
+        \includegraphics[width=2.5cm]{Enoch}
       \fi
       \name{Enoch Lindeman}
       \tagline{Technology Support Specialist / Help Desk}
@@ -73,7 +75,7 @@
       }
     \end{minipage}%
     \hfill%
-    \begin{minipage}{9.75cm}
+    \begin{minipage}[t]{9.75cm}
       \cvsection{Summary}
       \begin{quote}\noindent
         I am dedicated to empowering individuals through innovative
