@@ -1,13 +1,8 @@
-% ——————————————————————————————————————————————————————
 % preamble.tex
-% ——————————————————————————————————————————————————————
 
 \documentclass[10pt,a4paper,ragged2e]{altacv}
 
 %% MUST compile with XeLaTeX or LuaLaTeX
-\usepackage{graphicx}% for \includegraphics
-\usepackage{tikz}% for circle clipping
-
 \geometry{
   left=0.5cm,
   right=0.5cm,
@@ -16,91 +11,73 @@
 }
 
 \setmainfont{NotoSans_ExtraCondensed-Regular}[%
-  Path   = ./fonts/,%
+  Path      = ./fonts/,%
   Extension = .ttf%
 ]
 
-\usepackage{multicol}%
-\usepackage{ragged2e}%
-\usepackage{etoolbox}%
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
 
 % Customizations
-\renewcommand{\itemmarker}{{\small\textbullet}}%
-\renewcommand{\ratingmarker}{\faCircle}%
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
 
 \AtBeginDocument{%
-  \justifying%
-  \hyphenpenalty=10000%
-  \exhyphenpenalty=10000%
-}%
+  \justifying
+  \hyphenpenalty=10000
+  \exhyphenpenalty=10000
+}
 
-\AtBeginEnvironment{itemize}{\small}%
+\AtBeginEnvironment{itemize}{\small}
 
-\setlength{\columnsep}{0.5cm}%
+\setlength{\columnsep}{0.5cm}
 
-% Conditional flags
-\newif\ifcolorful%
-\colorfulfalse%
-\ifdefined\colorful%
-  \colorfultrue%
-\fi%
+\newif\ifcolorful
+\colorfulfalse
+\ifdefined\colorful
+  \colorfultrue
+\fi
 
-% Default colors
-\definecolor{Azure}{HTML}{000000}%
-\definecolor{Gray}{HTML}{4f4f4f}%
-\definecolor{Black}{HTML}{000000}%
-\colorlet{heading}{Black}%
-\colorlet{accent}{Black}%
-\colorlet{emphasis}{Black}%
-\colorlet{body}{Gray}%
+\definecolor{Azure}{HTML}{000000}
+\definecolor{Gray}{HTML}{4f4f4f}
+\definecolor{Black}{HTML}{000000}
+\colorlet{heading}{Black}
+\colorlet{accent}{Black}
+\colorlet{emphasis}{Black}
+\colorlet{body}{Gray}
 
-% Global override if 'colorful' theme is on
-\ifcolorful%
-  \definecolor{Azure}{HTML}{007FFF}%
-  \colorlet{heading}{Azure}%
-  \colorlet{accent}{Azure}%
-  % register the photo for altacv’s \makecvheader
-  \photo[2.5cm][0.4pt]{Enoch}%
-\fi%
+\ifcolorful
+  \definecolor{Azure}{HTML}{007FFF}
+  \colorlet{heading}{Azure}
+  \colorlet{accent}{Azure}
+  \photo[2.5cm][0.4pt]{Enoch}
+\fi
 
-% Defer *drawing* the custom two-column header until AFTER \begin{document}
+\name{Enoch Lindeman}
+\tagline{Technology Support Specialist / Help Desk}
+\personalinfo{%
+  \mailaddress{er@lndmn.com}\\
+  \phone{(619) 333-8221}\\
+  \linkedin{www.linkedin.com/in/enoch-lindeman}\\
+  \location{Utica, NY}%
+}
+
 \AtBeginDocument{%
-  \noindent%
-  \begin{minipage}[t]{20cm}%
-    % — Left column (profile) — 
-    \begin{minipage}[t]{9.75cm}%
-      \ifcolorful%
-        \begin{tikzpicture}[baseline=(img.center)]%
-          % clip to a circle of radius 1.25cm (half of 2.5cm)
-          \clip (0,0) circle (1.25cm);%
-          % insert the image
-          \node (img) at (0,0) {\includegraphics[width=2.5cm]{Enoch}};%
-          % draw a thin circular border in the accent color
-          \draw[accent,line width=0.4pt] (0,0) circle (1.25cm);%
-        \end{tikzpicture}%
-      \fi%
-      \name{Enoch Lindeman}%
-      \tagline{Technology Support Specialist / Help Desk}%
-      \personalinfo{%
-        \mailaddress{er@lndmn.com}%
-        \phone{(619) 333-8221}\\%
-        \linkedin{www.linkedin.com/in/enoch-lindeman}%
-        \location{Utica, NY}%
-      }%
+  \noindent
+  \begin{minipage}[t]{20cm}
+    \begin{minipage}[t]{9.75cm}
+      \makecvheader
     \end{minipage}%
     \hfill%
-    % — Right column (summary) —
-    \begin{minipage}[t]{9.75cm}%
-      \cvsection{Summary}%
-      \begin{quote}\noindent
+    \begin{minipage}[t]{9.75cm}
+      \cvsection{Summary}
+      \begin{quote}
+        \noindent
         I am dedicated to empowering individuals through innovative
         technology so that they can face their challenges with
         resilience to create a more hopeful world for all.
-      \end{quote}%
+      \end{quote}
     \end{minipage}%
   \end{minipage}%
-  
-  % ——— now let altacv build its own header ———
-  \makecvheader
-  
-}% end AtBeginDocument
+}
