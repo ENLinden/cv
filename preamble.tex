@@ -64,7 +64,7 @@
   \begin{minipage}[t]{20cm}%
     \begin{minipage}[t]{9.75cm}%
       \ifcolorful%
-        \begin{tikzpicture}[baseline=(img.center)]%
+        \begin{tikzpicture}[baseline=(current bounding box.north)]
           \clip (0,0) circle (1.25cm);%
           \node (img) at (0,0) {\includegraphics[width=2.5cm]{Enoch}};%
           \draw[accent,line width=0.4pt] (0,0) circle (1.25cm);%
