@@ -18,6 +18,8 @@
 \usepackage{multicol}
 \usepackage{ragged2e}
 \usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{tikz}
 
 % Customizations
 \renewcommand{\itemmarker}{{\small\textbullet}}
@@ -51,7 +53,6 @@
   \definecolor{Azure}{HTML}{007FFF}
   \colorlet{heading}{Azure}
   \colorlet{accent}{Azure}
-  \photo[2.5cm][0.4pt]{Enoch}
 \fi
 
 \name{Enoch Lindeman}
@@ -67,6 +68,13 @@
   \noindent
   \begin{minipage}[t]{20cm}
     \begin{minipage}[t]{9.75cm}
+      \ifcolorful
+        \begin{tikzpicture}[baseline=(img.center)]
+          \clip (0,0) circle (1.25cm);
+          \node (img) at (0,0) {\includegraphics[width=2.5cm]{Enoch}};
+          \draw[accent,line width=0.4pt] (0,0) circle (1.25cm);
+        \end{tikzpicture}
+      \fi
       \makecvheader
     \end{minipage}%
     \hfill%
