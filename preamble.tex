@@ -62,22 +62,19 @@
 \AtBeginDocument{%
   \noindent
   \begin{minipage}[t]{20cm}
-    % Left column
     \begin{minipage}[t]{9.75cm}
-      \begin{tabular}[t]{@{}c@{}l@{}}
-        \ifcolorful
-          \begin{tikzpicture}[baseline=(current bounding box.north)]
-            \clip (0,0) circle (1.25cm);
-            \node at (0,0){\includegraphics[width=2.5cm]{Enoch}};
-            \draw[accent,line width=0.4pt] (0,0) circle (1.25cm);
-          \end{tikzpicture}
-        \fi
-        &
+      \ifcolorful
+        \begin{tikzpicture}[baseline=(current bounding box.north)]
+          \clip (0,0) circle (1.25cm);
+          \node at (0,0) {\includegraphics[width=2.5cm]{Enoch}};
+          \draw[accent,line width=0.4pt] (0,0) circle (1.25cm);
+        \end{tikzpicture}\hspace{5mm}%
+      \fi
+      \begin{minipage}[t]{\linewidth}%
         \makecvheader
-      \end{tabular}
+      \end{minipage}%
     \end{minipage}%
     \hfill%
-    % Right column
     \begin{minipage}[t]{9.75cm}
       \cvsection{Summary}
       \begin{quote}\noindent
