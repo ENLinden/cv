@@ -61,26 +61,23 @@
 
 \AtBeginDocument{%
   \noindent
-  \begin{minipage}[t]{20cm}
-    \begin{minipage}[t]{9.75cm}
-      \ifcolorful
-        \begin{tikzpicture}[baseline=(current bounding box.north)]
-          \clip (0,0) circle (1.25cm);
-          \node at (0,0) {\includegraphics[width=2.5cm]{Enoch}};
-          \draw[accent,line width=0.4pt] (0,0) circle (1.25cm);
-        \end{tikzpicture}\hspace{5mm}%
-      \fi
-      \vspace*{-\baselineskip}%
-      \makecvheader%
-    \end{minipage}%
-    \hfill%
-    \begin{minipage}[t]{9.75cm}
-      \cvsection{Summary}
-      \begin{quote}\noindent
-        I am dedicated to empowering individuals through innovative
-        technology so that they can face their challenges with
-        resilience to create a more hopeful world for all.
-      \end{quote}
-    \end{minipage}%
-  \end{minipage}%
+  \begin{tabular*}{\textwidth}[t]{@{\extracolsep{\fill}}p{9.75cm}p{9.75cm}@{}}
+    % left cell: circular photo + full header
+    \ifcolorful
+      \begin{tikzpicture}[baseline=(current bounding box.north)]
+        \clip (0,0) circle (1.25cm);
+        \node at (0,0){\includegraphics[width=2.5cm]{Enoch}};
+        \draw[accent,line width=0.4pt] (0,0) circle (1.25cm);
+      \end{tikzpicture}\hspace{5mm}%
+    \fi
+    \makecvheader
+    &
+    % right cell: summary
+    \cvsection{Summary}%
+    \begin{quote}\noindent
+      I am dedicated to empowering individuals through innovative
+      technology so that they can face their challenges with
+      resilience to create a more hopeful world for all.
+    \end{quote}
+  \end{tabular*}%
 }
