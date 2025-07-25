@@ -1,6 +1,14 @@
 % !TEX root = cv.tex
 
-\documentclass[10pt,a4paper,ragged2e,nobib]{altacv}
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{fontspec}
 
 \makeatletter
 % 1) Redefine the header to use \smallskip, not \medskip
@@ -16,18 +24,20 @@
       \smallskip% tighten here too
       {\personalinfofont\@personalinfo\par}%
     \end{minipage}\hfill%
-    \altacv@right@photos\par%
-  \endgroup% no final \medskip
+    \altacv@right@photos\par\smallskip%
+  \endgroup
 }
 
-% 2) Restore v1.1.5 section‑heading spacing (medskip, not bigskip)
 \renewcommand{\cvsection}[2][]{%
-  \nointerlineskip
-  \medskip% was \bigskip in v1.7.x :contentReference[oaicite:4]{index=4}
-  \ifstrequal{#1}{}{}{\marginpar{%
-    \vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
-  {\color{heading}\cvsectionfont\MakeUppercase{#2}}\\[-1ex]%
-  {\color{headingrule}\rule{\linewidth}{2pt}\par}\medskip
+  \par\medskip
+  \if\relax\detokenize{#1}\relax
+  \else
+    \marginpar{\raggedright\scriptsize\itshape #1\par}%
+  \fi
+  \noindent
+    {\RaggedRight\color{heading}\cvsectionfont\MakeUppercase{#2}\par}%
+  \vspace{-1ex}% tuck the rule up a bit
+  \noindent{\color{headingrule}\rule{\linewidth}{2pt}}\par\smallskip
 }
 
 % —— Override \cvevent to the v1.1.5 version, with adjustable spacing
@@ -35,17 +45,36 @@
   \noindent
     {\large\color{emphasis}#1}%   % job title
   \hfill
-    \ifstrequal{#2}{}{}{\textbf{\color{accent}#2}}%   % company
-  \\[-0.5ex]%                       % small negative gap before date line
+    \ifstrequal{#2}{}{}{{\color{accent}#2}}%   % company
+  \\[-0.0ex]%                       % small negative gap before date line
     \ifstrequal{#3}{}{}{{\small\faCalendar\hspace{0.5em}#3}}%
   \hfill
     \ifstrequal{#4}{}{}{{\small\faMapMarker\hspace{0.5em}#4}}%
-  \vspace{0.5ex}%                  % small gap after the block
+  \vspace{0.0ex}%                  % small gap after the block
 }
-\makeatother
+
+\renewcommand{\divider}{%
+  \par
+  \centering
+  {\color{body!30}\hdashrule{\linewidth}{0.5pt}{0.2ex}}%
+  \par\smallskip
+}
+
+\newcommand{\eduline}[1]{%
+  \\\noindent\RaggedRight\text{#1}
+}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
 
 \makeatother
 
+\setlist[itemize]{%
+  label=\itemmarker,       % keep your bullet symbol
+  left=0pt,                % no extra indent
+  before=\RaggedRight,     % switch to ragged‑right
+  after=\justifying        % switch back to full justify if needed
+}
 
 \geometry{
   left=0.5cm,
@@ -54,48 +83,55 @@
   bottom=0.5cm,
 }
 
-\setmainfont{NotoSans_ExtraCondensed-Regular}[%
-  Path      = ./fonts/,%
-  Extension = .ttf%
+\setmainfont{NotoSans_ExtraCondensed}[
+  Path            =./fonts/,
+  Extension       =.ttf,
+  UprightFont     = *-Regular,       % NotoSans_ExtraCondensed-Regular.ttf
+  ItalicFont      = *-Italic,        % NotoSans_ExtraCondensed-Italic.ttf
+  BoldFont        = *-Bold,          % NotoSans_ExtraCondensed-Bold.ttf
+  BoldItalicFont  = *-BoldItalic,    % NotoSans_ExtraCondensed-BoldItalic.ttf
+  SemiBoldFont    = *-SemiBold,      % NotoSans_ExtraCondensed-SemiBold.ttf
+  ExtraBoldFont   = *-ExtraBold,     % NotoSans_ExtraCondensed-ExtraBold.ttf
+  BlackFont       = *-Black,         % NotoSans_ExtraCondensed-Black.ttf
+  MediumFont      = *-Medium,        % NotoSans_ExtraCondensed-Medium.ttf
+  LightFont       = *-Light,         % NotoSans_ExtraCondensed-Light.ttf
+  ExtraLightFont  = *-ExtraLight,    % NotoSans_ExtraCondensed-ExtraLight.ttf
+  ThinFont        = *-Thin,          % NotoSans_ExtraCondensed-Thin.ttf
+  %Scale           = MatchLowercase   % match x‑height across weights
 ]
 
-\usepackage{multicol}
-\usepackage{ragged2e}
-\usepackage{etoolbox}
-\usepackage{graphicx}
-\usepackage{tikz}
+\newfontfamily\quotefont{NotoSansMono-Regular}[
+  Path      =./fonts/,
+  Extension =.ttf,
+  Scale     = 0.75
+]
 
-\renewcommand{\itemmarker}{{\small\textbullet}}
-\renewcommand{\ratingmarker}{\faCircle}
-
-\AtBeginDocument{%
-  \justifying
-  \hyphenpenalty=10000
-  \exhyphenpenalty=10000
-}
+\AtBeginEnvironment{quote}{\quotefont}
 
 \AtBeginEnvironment{itemize}{\small}
 
 \setlength{\columnsep}{0.5cm}
 
-\newif\ifcolorful
-\colorfulfalse
-\ifdefined\colorful
-  \colorfultrue
+\newif\ifcolorful%
+\colorfulfalse%
+\ifdefined\colorful%
+  \colorfultrue%
 \fi
 
-\definecolor{Accent}{HTML}{000000}
+\definecolor{Accent}{HTML}{007fff}
 \definecolor{Gray}{HTML}{4f4f4f}
 \definecolor{Black}{HTML}{000000}
 \colorlet{heading}{Black}
 \colorlet{accent}{Black}
 \colorlet{emphasis}{Black}
+\colorlet{tagline}{Black}
 \colorlet{body}{Gray}
 
-\ifcolorful
+\ifcolorful%
   \definecolor{Accent}{HTML}{007FFF}
   \colorlet{heading}{Accent}
   \colorlet{accent}{Accent}
+  \colorlet{tagline}{Accent}
 \fi
 
 \name{Emalyn Lindeman}
@@ -108,6 +144,9 @@
 }
 
 \AtBeginDocument{%
+  \hyphenpenalty=200
+  \exhyphenpenalty=100
+  \emergencystretch=1.5em
   \noindent%
   \begin{minipage}[t]{20cm}%
     \begin{minipage}[t]{9.75cm}%
@@ -122,7 +161,7 @@
     \end{minipage}%
     \hfill%
     \begin{minipage}[t]{9.75cm}%
-      \vspace*{-1.75cm}% 
+      \vspace*{-1.75cm}%
       \cvsection{Summary}%
       \begin{quote}\noindent%
         I am dedicated to empowering individuals\\
