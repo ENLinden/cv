@@ -132,9 +132,14 @@
   \colorlet{tagline}{Accent}
 \fi
 
-\AtBeginEnvironment{quote}{\begingroup\quotefont\color{black}}
-
-\AtEndEnvironment{quote}{\endgroup}
+\RenewEnviron{quote}{%
+  \begingroup
+    \color{black}%      force black text
+    \itshape\large%     keep the class’s italics+size
+    \BODY%               insert the original quote material
+  \par
+  \endgroup
+}
 
 \name{Emalyn Lindeman}
 \tagline{Lorem Ipsum Dolor Sit Amet}
