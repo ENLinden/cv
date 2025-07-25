@@ -45,7 +45,7 @@
   \noindent
     {\large\color{emphasis}#1}%   % job title
   \hfill
-    \ifstrequal{#2}{}{}{{\color{accent}#2}}%   % company
+    \ifstrequal{#2}{}{}{{\color{black}#2}}%   % company
   \\[-0.0ex]%                       % small negative gap before date line
     \ifstrequal{#3}{}{}{{\small\faCalendar\hspace{0.5em}#3}}%
   \hfill
@@ -106,7 +106,7 @@
   Scale     = 0.75
 ]
 
-\AtBeginEnvironment{quote}{\quotefont}
+\AtBeginEnvironment{quote}{\quotefont\color{black}}
 
 \AtBeginEnvironment{itemize}{\small}
 
