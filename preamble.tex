@@ -132,7 +132,9 @@
   \colorlet{tagline}{Accent}
 \fi
 
-\AtBeginEnvironment{quote}{\quotefont\color{black}}
+\AtBeginEnvironment{quote}{\begingroup\quotefont\color{black}}
+
+\AtEndEnvironment{quote}{\endgroup}
 
 \name{Emalyn Lindeman}
 \tagline{Lorem Ipsum Dolor Sit Amet}
@@ -153,7 +155,7 @@
       \ifcolorful%
         \begin{tikzpicture}[baseline=(current bounding box.center)]%
           \clip (0,0) circle (1.25cm);%
-          \node at (0,0){\includegraphics[width=2.5cm]{Enoch}};%
+          \node at (0,0){\includegraphics[width=2.5cm]{Emalyn}};%
           \draw[accent,line width=0.4pt] (0,0) circle (1.25cm);%
         \end{tikzpicture}\hspace{5mm}%
       \fi%
