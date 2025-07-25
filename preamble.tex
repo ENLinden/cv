@@ -132,7 +132,14 @@
   \colorlet{tagline}{Accent}
 \fi
 
-\AtBeginEnvironment{quote}{\quotefont\color{black}}
+\RenewEnviron{quote}{%
+  \begingroup
+    \color{black}%
+    \quotefont\large
+    \BODY%
+  \par
+  \endgroup
+}
 
 \name{Emalyn Lindeman}
 \tagline{Lorem Ipsum Dolor Sit Amet}
