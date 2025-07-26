@@ -109,12 +109,6 @@
 
 \setlength{\columnsep}{0.5cm}
 
-\newif\ifcolorful%
-\colorfulfalse%
-\ifdefined\colorful%
-  \colorfultrue%
-\fi
-
 \definecolor{Accent}{HTML}{007fff}
 \definecolor{Gray}{HTML}{4f4f4f}
 \definecolor{Black}{HTML}{000000}
@@ -123,13 +117,6 @@
 \colorlet{emphasis}{Black}
 \colorlet{tagline}{Black}
 \colorlet{body}{Gray}
-
-\ifcolorful%
-  \definecolor{Accent}{HTML}{880c59}
-  \colorlet{heading}{Accent}
-  \colorlet{accent}{Accent}
-  \colorlet{tagline}{Accent}
-\fi
 
 \RenewEnviron{quote}{%
   \begingroup
@@ -148,6 +135,19 @@
   \linkedin{/emalyn-lindeman-41a050206}\\%
   \location{Utica, NY}%
 }
+
+\newif\ifcolorful%
+\colorfulfalse%
+\ifdefined\colorful%
+  \colorfultrue%
+\fi
+
+\ifcolorful%
+  \definecolor{Accent}{HTML}{880c59}
+  \colorlet{heading}{Accent}
+  \colorlet{accent}{Accent}
+  \colorlet{tagline}{Accent}
+\fi
 
 \AtBeginDocument{%
   \hyphenpenalty=200
