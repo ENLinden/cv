@@ -1,6 +1,7 @@
-% !TEX root = cv.tex
+\documentclass[10pt,a4paper,ragged2e]{./altacv}
 
-\documentclass[10pt,a4paper,ragged2e]{altacv}
+\typeout{*** JOBNAME = \jobname ***}
+\typeout{*** \string\ifcolorful = \ifcolorful TRUE\else FALSE\fi ***}
 
 \usepackage{multicol}
 \usepackage{ragged2e}
@@ -9,6 +10,11 @@
 \usepackage{tikz}
 \usepackage{enumitem}
 \usepackage{fontspec}
+
+\defaultfontfeatures{%
+  Ligatures=TeX,%
+  FallbackFamily={NotoSans-Regular}%
+}
 
 \makeatletter
 % 1) Redefine the header to use \smallskip, not \medskip
@@ -112,25 +118,12 @@
 
 \setlength{\columnsep}{0.5cm}
 
-\newif\ifcolorful%
-\colorfulfalse%
-\ifdefined\colorful%
-  \colorfultrue%
-\fi
-
 \definecolor{Black}{HTML}{000000}
 \colorlet{heading}{Black}
 \colorlet{accent}{Black}
 \colorlet{emphasis}{Black}
 \colorlet{tagline}{Black}
 \colorlet{body}{Black}
-
-\ifcolorful%
-  \definecolor{Accent}{HTML}{0445a5}
-  \colorlet{heading}{Accent}
-  \colorlet{accent}{Accent}
-  \colorlet{tagline}{Accent}
-\fi
 
 \RenewEnviron{quote}{%
   \begingroup
@@ -149,6 +142,13 @@
   \linkedin{/enoch-lindeman}\\%
   \location{Utica, NY}%
 }
+
+\ifcolorful%
+  \definecolor{Accent}{HTML}{0445a5}
+  \colorlet{heading}{Accent}
+  \colorlet{accent}{Accent}
+  \colorlet{tagline}{Accent}
+\fi
 
 \AtBeginDocument{%
   \hyphenpenalty=200
