@@ -54,14 +54,16 @@
 }
 
 \renewcommand{\divider}{%
-  \par
+  \par\smallskip
   \centering
   {\color{body!30}\hdashrule{\linewidth}{0.5pt}{0.2ex}}%
   \par\smallskip
 }
 
 \newcommand{\eduline}[1]{%
-  \\\noindent\RaggedRight\text{#1}
+  \par\noindent\RaggedRight#1\par%
+  \addvspace{-\bigskipamount}
+  \smallskip
 }
 
 \renewcommand{\itemmarker}{{\small\textbullet}}
@@ -116,20 +118,20 @@
   \colorfultrue%
 \fi
 
-\definecolor{Accent}{HTML}{0445a5}
-\definecolor{Gray}{HTML}{4f4f4f}
 \definecolor{Black}{HTML}{000000}
 \colorlet{heading}{Black}
 \colorlet{accent}{Black}
 \colorlet{emphasis}{Black}
 \colorlet{tagline}{Black}
-\colorlet{body}{Gray}
+\colorlet{body}{Black}
 
 \ifcolorful%
-  \definecolor{Accent}{HTML}{007FFF}
+  \definecolor{Accent}{HTML}{0445a5}
+  \definecolor{Gray}{HTML}{7f7f7f}
   \colorlet{heading}{Accent}
   \colorlet{accent}{Accent}
   \colorlet{tagline}{Accent}
+  \colorlet{body}{Gray}
 \fi
 
 \RenewEnviron{quote}{%
