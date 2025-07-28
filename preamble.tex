@@ -1,5 +1,3 @@
-% !TEX root = cv.tex
-
 \documentclass[10pt,a4paper,ragged2e]{altacv}
 
 \usepackage{multicol}
@@ -9,6 +7,11 @@
 \usepackage{tikz}
 \usepackage{enumitem}
 \usepackage{fontspec}
+
+\defaultfontfeatures{%
+  Ligatures=TeX,%
+  FallbackFamily={NotoSans-Regular}%
+}
 
 \makeatletter
 % 1) Redefine the header to use \smallskip, not \medskip
@@ -116,7 +119,7 @@
 \colorlet{accent}{Black}
 \colorlet{emphasis}{Black}
 \colorlet{tagline}{Black}
-\colorlet{body}{Gray}
+\colorlet{body}{Black}
 
 \RenewEnviron{quote}{%
   \begingroup
@@ -147,6 +150,7 @@
   \colorlet{heading}{Accent}
   \colorlet{accent}{Accent}
   \colorlet{tagline}{Accent}
+  \colorlet{body}{Gray}
 \fi
 
 \AtBeginDocument{%
