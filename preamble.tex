@@ -17,17 +17,15 @@
 }
 
 \makeatletter
-% 1) Redefine the header to use \smallskip, not \medskip
-%    and to drop the final \medskip entirely.
 \renewcommand{\makecvheader}{%
   \begingroup
     \altacv@left@photos\hfill%
     \begin{minipage}{\dimexpr\linewidth-\altacv@photos@width}%
       \raggedright%
       {\namefont\color{name}\MakeUppercase{\@name}\par}%
-      \smallskip% was \medskip in v1.7.x :contentReference[oaicite:3]{index=3}
+      \smallskip%
       {\taglinefont\color{tagline}\@tagline\par}%
-      \smallskip% tighten here too
+      \smallskip%
       {\personalinfofont\@personalinfo\par}%
     \end{minipage}\hfill%
     \altacv@right@photos\par\smallskip%
@@ -42,21 +40,20 @@
   \fi
   \noindent
     {\RaggedRight\color{heading}\cvsectionfont\MakeUppercase{#2}\par}%
-  \vspace{-1ex}% tuck the rule up a bit
+  \vspace{-1ex}%
   \noindent{\color{headingrule}\rule{\linewidth}{2pt}}\par\smallskip
 }
 
-% —— Override \cvevent to the v1.1.5 version, with adjustable spacing
 \renewcommand{\cvevent}[4]{%
   \noindent
-    {\large\color{emphasis}#1}%   % job title
+    {\large\color{emphasis}#1}%
   \hfill
-    \ifstrequal{#2}{}{}{{\color{black}#2}}%   % company
-  \\[-0.0ex]%                       % small negative gap before date line
+    \ifstrequal{#2}{}{}{{\color{black}#2}}%
+  \\[-0.0ex]%
     \ifstrequal{#3}{}{}{{\small\faCalendar\hspace{0.5em}#3}}%
   \hfill
     \ifstrequal{#4}{}{}{{\small\faMapMarker\hspace{0.5em}#4}}%
-  \vspace{0.0ex}%                  % small gap after the block
+  \vspace{0.0ex}%
 }
 
 \renewcommand{\divider}{%
@@ -78,10 +75,10 @@
 \makeatother
 
 \setlist[itemize]{%
-  label=\itemmarker,       % keep your bullet symbol
-  left=0pt,                % no extra indent
-  before=\RaggedRight,     % switch to ragged‑right
-  after=\justifying        % switch back to full justify if needed
+  label=\itemmarker,
+  left=0pt,
+  before=\RaggedRight,
+  after=\justifying
 }
 
 \geometry{
@@ -94,18 +91,18 @@
 \setmainfont{NotoSans_ExtraCondensed}[
   Path            =./fonts/,
   Extension       =.ttf,
-  UprightFont     = *-Regular,       % NotoSans_ExtraCondensed-Regular.ttf
-  ItalicFont      = *-Italic,        % NotoSans_ExtraCondensed-Italic.ttf
-  BoldFont        = *-Bold,          % NotoSans_ExtraCondensed-Bold.ttf
-  BoldItalicFont  = *-BoldItalic,    % NotoSans_ExtraCondensed-BoldItalic.ttf
-  SemiBoldFont    = *-SemiBold,      % NotoSans_ExtraCondensed-SemiBold.ttf
-  ExtraBoldFont   = *-ExtraBold,     % NotoSans_ExtraCondensed-ExtraBold.ttf
-  BlackFont       = *-Black,         % NotoSans_ExtraCondensed-Black.ttf
-  MediumFont      = *-Medium,        % NotoSans_ExtraCondensed-Medium.ttf
-  LightFont       = *-Light,         % NotoSans_ExtraCondensed-Light.ttf
-  ExtraLightFont  = *-ExtraLight,    % NotoSans_ExtraCondensed-ExtraLight.ttf
-  ThinFont        = *-Thin,          % NotoSans_ExtraCondensed-Thin.ttf
-  Scale           = 1.2   % match x‑height across weights
+  UprightFont     = *-Regular,
+  ItalicFont      = *-Italic,
+  BoldFont        = *-Bold,
+  BoldItalicFont  = *-BoldItalic,
+  SemiBoldFont    = *-SemiBold,
+  ExtraBoldFont   = *-ExtraBold,
+  BlackFont       = *-Black,
+  MediumFont      = *-Medium,
+  LightFont       = *-Light,
+  ExtraLightFont  = *-ExtraLight,
+  ThinFont        = *-Thin,
+  Scale           = 1.2
 ]
 
 \newfontfamily\quotefont{NotoSansMono-Regular}[
@@ -137,7 +134,7 @@
 }
 
 \name{Emalyn Lindeman}
-\tagline{Education \& Support Specialist}
+\tagline{Administrative \& Program Support Specialist}
 \personalinfo{%
   \mailaddress{emalyn@lndmn.com}\\%
   \phone{(623) 313-4703}\\%
@@ -180,9 +177,19 @@
       \vspace*{-1.75cm}%
       \cvsection{Summary}%
       \begin{quote}\noindent%
-        I am dedicated to sharing\\ compassion with others,
-        so that they can feel empowered and validated,
-        and to share in the joy of their breakthroughs.
+        Administrative and program support professional\\
+        with direct experience in documentation,\\
+        data tracking, and multi-system coordination.\\
+        Managed records and progress notes\\
+        for hundreds of students across concurrent programs;\\
+        built original systems from scratch\\
+        with no template or prior framework.\\
+        Comfortable working independently in a remote setting,\\
+        handling diverse workloads with accuracy\\
+        and a high level of professionalism.\\
+        Drawn to mission-driven organizations\\
+        where organized, detail-oriented support\\
+        makes a real difference for families.
       \end{quote}%
     \end{minipage}%
   \end{minipage}%
