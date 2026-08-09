@@ -168,14 +168,36 @@ Positions and Skills
    * API Gateway Implementation
 
 Experiences and Achievements
+* Client Services Representative II (Bank of America)
+   * Began October 2025
+   * Current role
+   * Handles approximately 100 client calls per day
+   * Top 5% performer in role across all measured performance metrics
+   * Supports client account servicing, transaction assistance, and issue resolution
+   * Applies identity-verification and privacy procedures
+   * Documents customer interactions, account updates, and follow-up needs
+   * Coordinates escalations across banking systems and support channels
+   * Uses internal knowledge resources to answer policy and procedure questions
+
+* Online Order Fulfillment Associate (Walmart)
+   * Worked in Utica, NY from July 2025 to October 2025
+   * Fulfilled approximately 60 online orders per shift
+   * Sustained approximately 100 picked items per hour
+   * Picked, staged, and dispensed online grocery and merchandise orders
+   * Used handheld devices and store systems to locate inventory and update order status
+   * Communicated substitutions, delays, and pickup readiness during customer handoffs
+   * Coordinated with stocking, front-end, and customer-service teams during peak periods
+   * Maintained organized staging areas and followed safety procedures for customer-ready pickup
+
 * Technology Support Specialist / Help Desk (TUHSD)
-   * Oversaw 1:1 deployment of 3,000 devices on campus
+   * Oversaw 1:1 deployment for 3,000 campus users and their personal devices, plus additional operational devices as needed
+      * Maintained average resolution time under 30 minutes for Tier-1 support
       * Was first point of contact for all issues regarding internet-connected devices on large high school campus
       * Ensured all staff & students’ devices met their needs, allowing educational environment to operate seamlessly
-   * Created support app for 14,000 users in district
-      * Built Microsoft Power App with O365 and SharePoint data integrations to deliver relevant information to users
-      * Made possible a reduction in user information requests of over 90%, eliminating time users spent waiting for data
-   * Aided in rollout of end-user ticketing system
+   * Created support app for up to 10,000 users in district
+      * Built Microsoft Power App with Office 365 Graph API plus O365 and SharePoint data integrations to deliver relevant information to users
+      * Made possible a reduction in recurring user information requests of over 90%, eliminating time users spent waiting for data
+   * Aided in rollout of separate end-user ticketing system
       * Reduced response time by ~30%
       * Reduced forgotten backlog tasks by ~90%
    * Aided in rollout of improved user account security measures
@@ -186,6 +208,8 @@ Experiences and Achievements
       * Implemented tracking system that improved asset utilization by 15%
    * Developed and maintained technical documentation
       * Created comprehensive guides that decreased onboarding time by 25%
+   * Provided one-on-one staff support to 120+ staff members through formal training, cybersecurity advising, and help desk tasks
+   * Performed hardware repair for out-of-warranty devices, saving approximately $70,000 annually on campus hardware directly accountable to role
       * Updated existing documentation, enhancing clarity and usability for end-users
    * Coordinated cross-departmental IT projects
       * Led initiatives that improved inter-departmental communication and efficiency
@@ -246,6 +270,7 @@ Experiences and Achievements
 
 * Technology Support Specialist (Mission)
    * Oversaw online transition of teaching
+      * Supported online transition across nearly all of upstate New York
       * Supported over 3,000 users and devices transitioning from fully in-person to fully remote in Q2 2020
       * Laid groundwork for and aided in the production and marketing of successful online ad campaign effort
    * Systemized labor-intensive menial tasks
@@ -255,6 +280,7 @@ Experiences and Achievements
       * Allowed for remote onboarding and setup of mobile device management software
       * Substantially reduced administrative burden of remote transition
    * Supported and Administered Virtual Meetings
+      * Supported weekly events with average resolution time under 3 minutes
       * Allowed for seamless transition to remote workflow
       * Eased burden on participants, allowing for meeting intent to remain in focus
    * Implemented remote troubleshooting protocols
@@ -288,8 +314,10 @@ Education and Courses
    * Product Development
    * 3D Modeling and CAD
    * Innovative Thinking
-   * Current 4.0 GPA
-   * Expected May 2026
+   * 3.8 GPA
+   * Completed August 2026
+* Master of Science in Information Technology
+   * Starting Spring 2027
 * Associate of Science in Computer Science
    * Software Development
    * Circuit Design

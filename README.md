@@ -27,7 +27,7 @@ Ensure you have the following installed on your system:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/ERLindeman/cv.git
+   git clone https://github.com/ENLinden/cv.git
    cd cv
 
 2. **Update Info in Files**

@@ -304,3 +304,7 @@ TSWLatexianTemp*
 
 # Locally generated colorful CV wrapper
 /cv_colorful.tex
+/references_colorful.tex
+
+# Internal master CV build output
+/cv_master.pdf
