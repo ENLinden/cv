@@ -301,3 +301,6 @@ TSWLatexianTemp*
 #*Notes.bib
 *.bcf-SAVE-ERROR
 *.bbl-SAVE-ERROR
+
+# Locally generated colorful CV wrapper
+/cv_colorful.tex
