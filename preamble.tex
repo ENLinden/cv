@@ -17,6 +17,12 @@
 }
 
 \makeatletter
+\newcommand{\cvidentity}{%
+  {\namefont\color{name}\MakeUppercase{\@name}\par}%
+  \smallskip%
+  {\taglinefont\color{tagline}\@tagline\par}%
+}
+
 % 1) Redefine the header to use \smallskip, not \medskip
 %    and to drop the final \medskip entirely.
 \renewcommand{\makecvheader}{%
@@ -24,9 +30,7 @@
     \altacv@left@photos\hfill%
     \begin{minipage}{\dimexpr\linewidth-\altacv@photos@width}%
       \raggedright%
-      {\namefont\color{name}\MakeUppercase{\@name}\par}%
-      \smallskip% was \medskip in v1.7.x :contentReference[oaicite:3]{index=3}
-      {\taglinefont\color{tagline}\@tagline\par}%
+      \cvidentity%
       \smallskip% tighten here too
       {\personalinfofont\@personalinfo\par}%
     \end{minipage}\hfill%
@@ -134,14 +138,22 @@
   \endgroup
 }
 
+\newcommand{\contactgrid}{%
+  \begingroup
+  \personalinfofont
+  \setlength{\tabcolsep}{0pt}%
+  \renewcommand{\arraystretch}{0.95}%
+  \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}l@{\extracolsep{\fill}}l@{}}%
+    \mailaddress{enik@lndn.me} & \printinfo{\faLinkedin}{/enik-linden}[https://linkedin.com/in/enik-linden] & \location{Chicago, IL} \\%
+    \phone{(619) 333-8221} & \printinfo{\faGithub}{/ENLinden}[https://github.com/ENLinden] & \\%
+  \end{tabular*}%
+  \endgroup
+}
+
 \name{Enik Linden}
 \tagline{Client Services and Technology Operations}
 \personalinfo{%
-  \mailaddress{enik@lndn.me}\\%
-  \phone{(619) 333-8221}\\%
-  \printinfo{\faLinkedin}{/enik-linden}[https://linkedin.com/in/enik-linden]\\%
-  \printinfo{\faGithub}{/ENLinden}[https://github.com/ENLinden]\\%
-  \location{Chicago, IL}%
+  \contactgrid%
 }
 
 \ifcolorful%
@@ -159,13 +171,17 @@
   \begin{minipage}[t]{20cm}%
     \begin{minipage}[t]{9.75cm}%
       \ifcolorful%
-        \begin{tikzpicture}[baseline=(current bounding box.center)]%
-          \clip (0,0) circle (1.25cm);%
-          \node at (0,0){\includegraphics[width=2.5cm]{Enoch}};%
-          \draw[accent,line width=0.4pt] (0,0) circle (1.25cm);%
-        \end{tikzpicture}\hspace{5mm}%
-        \begin{minipage}[t]{\dimexpr\linewidth-3.1cm\relax}%
-          \vtop{\makecvheader}%
+        \begin{minipage}[t]{\linewidth}%
+          \begin{tikzpicture}[baseline=(current bounding box.center)]%
+            \clip (0,0) circle (1.25cm);%
+            \node at (0,0){\includegraphics[width=2.5cm]{Enoch}};%
+            \draw[accent,line width=0.4pt] (0,0) circle (1.25cm);%
+          \end{tikzpicture}\hspace{5mm}%
+          \begin{minipage}[t]{\dimexpr\linewidth-3.1cm\relax}%
+            \vtop{\cvidentity}%
+          \end{minipage}%
+          \par\smallskip%
+          \contactgrid%
         \end{minipage}%
       \else%
         \vtop{\makecvheader}%
@@ -173,11 +189,14 @@
     \end{minipage}%
     \hfill%
     \begin{minipage}[t]{9.75cm}%
-      \vspace*{-1.75cm}%
+      \ifcolorful%
+        \vspace*{-0.25cm}%
+      \else%
+        \vspace*{-1.35cm}%
+      \fi%
       \cvsection{Purpose}%
       \begin{quote}\noindent%
-        Empowering individuals\\
-        through innovative technology so that\\
+        Empowering individuals through innovative technology so that\\
         they can face their challenges with resilience\\
         to create a more hopeful world for all.
       \end{quote}%

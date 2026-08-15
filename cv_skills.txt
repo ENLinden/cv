@@ -172,11 +172,11 @@ Experiences and Achievements
    * Began October 2025
    * Current role
    * Handles approximately 100 client calls per day
-   * Top 5% performer in role across all measured performance metrics
+   * Top 5% performer in role across all measured performance metrics by balancing service, accuracy, compliance, and follow-through
    * Supports client account servicing, transaction assistance, and issue resolution
    * Applies identity-verification and privacy procedures
-   * Documents customer interactions, account updates, and follow-up needs
-   * Coordinates escalations across banking systems and support channels
+   * Documents customer interactions, account updates, and follow-up needs clearly in account notes for later handling
+   * Routes escalations across banking systems and support channels
    * Uses internal knowledge resources to answer policy and procedure questions
 
 * Online Order Fulfillment Associate (Walmart)
@@ -185,13 +185,13 @@ Experiences and Achievements
    * Sustained approximately 100 picked items per hour
    * Picked, staged, and dispensed online grocery and merchandise orders
    * Used handheld devices and store systems to locate inventory and update order status
-   * Communicated substitutions, delays, and pickup readiness during customer handoffs
-   * Coordinated with stocking, front-end, and customer-service teams during peak periods
+   * Communicated substitutions, delays, and pickup readiness through app-based order updates
+   * Coordinated with stocking, front-end, and customer-service teams during peak periods so customer-dependent handoffs continued smoothly
    * Maintained organized staging areas and followed safety procedures for customer-ready pickup
 
-* Technology Support Specialist / Help Desk (TUHSD)
-   * Oversaw 1:1 deployment for 3,000 campus users and their personal devices, plus additional operational devices as needed
-      * Maintained average resolution time under 30 minutes for Tier-1 support
+* Information Technology Support Specialist (Tolleson Union High School District)
+   * Supported 1:1 deployment for 3,000 campus users and their personal devices, plus additional operational devices as needed
+      * Maintained average resolution time under 30 minutes for Tier-1 support for users who depended on one-to-one endpoints for daily instruction
       * Was first point of contact for all issues regarding internet-connected devices on large high school campus
       * Ensured all staff & students’ devices met their needs, allowing educational environment to operate seamlessly
    * Created support app for up to 10,000 users in district
@@ -206,7 +206,7 @@ Experiences and Achievements
    * Managed IT inventory and asset tracking
       * Streamlined inventory processes, reducing loss by 20%
       * Implemented tracking system that improved asset utilization by 15%
-   * Developed and maintained technical documentation
+   * Developed and maintained technical documentation that made recurring workflows easier to carry forward
       * Created comprehensive guides that decreased onboarding time by 25%
    * Provided one-on-one staff support to 120+ staff members through formal training, cybersecurity advising, and help desk tasks
    * Performed hardware repair for out-of-warranty devices, saving approximately $70,000 annually on campus hardware directly accountable to role
@@ -274,7 +274,7 @@ Experiences and Achievements
       * Supported over 3,000 users and devices transitioning from fully in-person to fully remote in Q2 2020
       * Laid groundwork for and aided in the production and marketing of successful online ad campaign effort
    * Systemized labor-intensive menial tasks
-      * Automated production of congregation’s weekly program
+      * Templated production of congregation’s weekly program
       * Created decentralized framework for identification and classification of service opportunities, allowing for increased utilization of volunteer time
    * Led onboarding, orientation, and training of new missionaries
       * Allowed for remote onboarding and setup of mobile device management software
@@ -314,7 +314,7 @@ Education and Courses
    * Product Development
    * 3D Modeling and CAD
    * Innovative Thinking
-   * 3.8 GPA
+   * 3.85 final posted cumulative GPA
    * Completed August 2026
 * Master of Science in Information Technology
    * Starting Spring 2027
